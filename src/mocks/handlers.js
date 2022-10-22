@@ -1,12 +1,11 @@
 import { rest } from 'msw';
 
 export const handlers = [
-  rest.get('/login', async (req, res, ctx) => {
+  rest.get('http://localhost:3001/counter/increment', async (req, res, ctx) => {
+    const { value } = res.body;
     return res(
       ctx.json({
-        id: 'f79e82e8-c34a-4dc7-a49e-9fadc0979fda',
-        firstName: 'John',
-        lastName: 'Maverick',
+        value: value + 2,
       })
     );
   }),
