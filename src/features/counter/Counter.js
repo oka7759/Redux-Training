@@ -22,7 +22,7 @@ const Counter = () => {
         </button>
         <button
           onClick={() => {
-            dispatch(fatchincrement(2));
+            dispatch(fatchincrement(count));
           }}
         >
           통신더하기
